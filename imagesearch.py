@@ -3,7 +3,6 @@ import time
 import os
 import tkinter
 import move
-import cv2
 from PIL import ImageGrab
 import numpy as np
 
@@ -46,6 +45,7 @@ cv2.waitKey(0)
 '''
 
 def find(img,confi, x1 = 0, y1 = 0, x2 = ww, y2 = wh):
+    '''
     method = cv2.TM_CCOEFF_NORMED
     screen = pag.screenshot(region=(x1,y1,x2,y2))
     screen = cv2.cvtColor(np.array(screen), cv2.COLOR_RGB2BGR)
@@ -59,7 +59,13 @@ def find(img,confi, x1 = 0, y1 = 0, x2 = ww, y2 = wh):
     if max_val >= confi:
         return [1,x,y]
     return 
+    '''
 
+    r = pag.locateOnScreen('./images/hive1.png',region=(x1,y1,x2,y2))
+    if r:
+        return [1,r]
+    else:
+        return
 
 
 
