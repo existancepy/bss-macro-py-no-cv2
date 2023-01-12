@@ -3,7 +3,6 @@ import time
 import os
 import tkinter
 import imagesearch
-from python_imagesearch.imagesearch import imagesearcharea
 from webhook import webhook
 
 savedata = {}
