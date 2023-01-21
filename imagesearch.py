@@ -61,7 +61,7 @@ def find(img,confi, x1 = 0, y1 = 0, x2 = ww, y2 = wh):
     return 
     '''
 
-    r = pag.locateOnScreen('./images/hive1.png',region=(x1,y1,x2,y2))
+    r = pag.locateOnScreen('./images/{}'.format(img),region=(x1,y1,x2,y2))
     if r:
         return [1,r]
     else:
