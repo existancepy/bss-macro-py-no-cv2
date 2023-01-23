@@ -60,8 +60,10 @@ def find(img,confi, x1 = 0, y1 = 0, x2 = ww, y2 = wh):
         return [1,x,y]
     return 
     '''
-
-    r = pag.locateOnScreen('./images/{}'.format(img),region=(x1,y1,x2,y2))
+    if display_type == "built-in retina display":
+        r = pag.locateOnScreen('./images/retina/{}'.format(img),region=(x1,y1,x2,y2))
+    else:
+        r = pag.locateOnScreen('./images/built-in/{}'.format(img),region=(x1,y1,x2,y2))
     if r:
         return [1,r[0],r[1],1]
     else:
