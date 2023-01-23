@@ -60,6 +60,7 @@ def find(img,confi, x1 = 0, y1 = 0, x2 = ww, y2 = wh):
         return [1,x,y]
     return 
     '''
+    display_type = loadsettings.load()['display_type']
     if display_type == "built-in retina display":
         r = pag.locateOnScreen('./images/retina/{}'.format(img),region=(x1,y1,x2,y2))
     else:
