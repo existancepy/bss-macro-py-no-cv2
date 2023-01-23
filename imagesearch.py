@@ -5,6 +5,7 @@ import tkinter
 import move
 from PIL import ImageGrab
 import numpy as np
+import loadsettings
 
 savedata = {}
 def loadSave():
